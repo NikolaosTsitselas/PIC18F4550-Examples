@@ -22,7 +22,7 @@ setup_ccp1(ccp_pwm);
 setup_timer_2(t2_div_by_16,50,1); // DC MAX = 203, F = 15 KHZ
 setup_adc(adc_clock_internal);
 setup_adc_ports(an0_to_an4|VSS_VDD);
-set_adc_channel(5); // channel 5 => RA4
+set_adc_channel(4); // channel 4 => RA4
 
 
 
