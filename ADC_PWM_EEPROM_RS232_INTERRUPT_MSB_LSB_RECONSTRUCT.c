@@ -1,6 +1,6 @@
 #include <main_.h>
 #use delay(clock=8000000)
-
+#include <2416.h>
 #use rs232(baud=115200,xmit=pin_c6,rcv=pin_c7,stop=1,bits=8,stream=PC,parity=N)
 
 
