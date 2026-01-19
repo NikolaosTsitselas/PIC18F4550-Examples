@@ -62,6 +62,10 @@ setup_adc_ports(an0_to_an1|vss_vdd);
 set_adc_channel(1);
 delay_us(20);
 
+init_ext_eeprom();
+
+
+ 
 enable_interrupts(global);
 enable_interrupts(INT_EXT);
 ext_int_edge(0,L_TO_H);
@@ -96,9 +100,11 @@ set_pwm1_duty(duty);
 if(index<sizeof(adc_value)){
 
 adc_value[index]=(adc)&0xFF; //LSB
+write_ext_eeprom(index,adc_value[index]);
 index++;
 
 adc_value[index]=(adc>>8)&0xFF; //MSB
+write_ext_eeprom(index,adc_value[index]);
 index++;
 }
 
