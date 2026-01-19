@@ -12,7 +12,7 @@ int temperature[40];
 int16 temp_int;
 int index=0;
 void main(void){
-set_tris_a(0b0000100);
+set_tris_a(0b00000100);
 setup_ccp1(ccp_off);
 setup_ccp2(ccp_off);
 setup_adc(adc_clock_internal);
